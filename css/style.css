@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101010;
+}
+nav {
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #909090;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: #367cff;
+  transition: 0.5s;
+}
+
+a:hover {
+  background-color: white;
+}
+
+a:hover::before {
+  width: 100%;
+}
